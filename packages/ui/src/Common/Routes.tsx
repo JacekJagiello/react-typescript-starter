@@ -2,20 +2,16 @@ import * as React from 'react'
 import { Switch, Route } from 'react-router'
 import defaultLayout from './Layout'
 
-export enum Routes {
-  Home = '/',
-  Dashboard = '/dashboard',
+const Home = () => <h3>Home</h3>
+const Dashboard = () => <h3>Dashboard</h3>
+
+export const Routes = {
+  home: '/',
+  dashboard: '/dashboard',
 }
 
 export default () =>
   <Switch>
-    <Route
-      path={Routes.Home}
-      exact
-      component={defaultLayout(() => <h3>Home</h3>)}
-    />
-    <Route
-      path={Routes.Dashboard}
-      component={defaultLayout(() => <h3>Dashboard Alone</h3>)}
-    />
+    <Route exact path={Routes.home} component={defaultLayout(Home)} />
+    <Route path={Routes.dashboard} component={defaultLayout(Dashboard)} />
   </Switch>

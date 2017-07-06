@@ -16,14 +16,14 @@ const config = {
     loaders: [
       {
         test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader'
+        loader: 'awesome-typescript-loader',
       },
       {
         test: /\.scss$/,
         use: [
-          { loader: "style-loader"},
-          { loader: "css-loader"},
-          {loader: "sass-loader",}
+          { loader: "style-loader" },
+          { loader: "css-loader" },
+          { loader: "sass-loader", }
         ]
       },
       {

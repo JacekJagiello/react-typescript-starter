@@ -5,6 +5,7 @@
   "scripts": {
     "preinstall": "tsc"
   },
+  "private": true,
   "license": "MIT",
   "keywords": [],
   "author": "",

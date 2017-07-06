@@ -1,9 +1,10 @@
 import * as React from 'react'
-import { Button } from '@blueprintjs/core'
+
+import { MinimalButton } from '../Common/Components'
 import { Routes } from '../Common/Routes'
 
 interface MenuProps {
-  onClick(routeName: Routes): void
+  onClick(routeName: string): void
 }
 
 class Menu extends React.PureComponent<MenuProps, {}> {
@@ -11,15 +12,15 @@ class Menu extends React.PureComponent<MenuProps, {}> {
     const { onClick } = this.props
     return (
       <nav>
-        <Button
-          className="pt-minimal pt-icon-home"
+        <MinimalButton
+          iconName="home"
           text="Home"
-          onClick={() => onClick(Routes.Home)}
+          onClick={() => onClick(Routes.home)}
         />
-        <Button
-          className="pt-minimal pt-icon-dashboard"
+        <MinimalButton
+          iconName="dashboard"
           text="Dashboard"
-          onClick={() => onClick(Routes.Dashboard)}
+          onClick={() => onClick(Routes.dashboard)}
         />
       </nav>
     )

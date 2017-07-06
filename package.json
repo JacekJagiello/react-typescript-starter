@@ -1,11 +1,12 @@
 {
-	"scripts": {
-		"format-file": "prettier --write --no-semi --single-quote --trailing-comma all",
-		"format-project": "npm run format-file -- 'packages/*/src/**/*.tsx'"
-	},
-	"devDependencies": {
-		"lerna": "^2.0.0-rc.5",
-		"prettier": "^1.5.2",
-		"tslint": "^5.4.3"
-	}
+  "scripts": {
+    "format-file": "prettier --write --no-semi --single-quote --trailing-comma all --parser typescript",
+    "format-project": "npm run format-file -- 'packages/*/src/**/*.tsx'"
+  },
+  "devDependencies": {
+    "lerna": "^2.0.0-rc.5",
+    "prettier": "^1.5.2",
+    "tslint": "^5.4.3",
+    "typescript": "^2.4.1"
+  }
 }
