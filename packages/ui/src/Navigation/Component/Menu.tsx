@@ -1,7 +1,7 @@
 import * as React from 'react'
 
-import { MinimalButton } from '../Common/Components'
-import { Routes } from '../Common/Routes'
+import { MinimalButton } from '../../Common/Components'
+import { Routes } from '../../Common/Routes'
 
 interface MenuProps {
   onClick(routeName: string): void
