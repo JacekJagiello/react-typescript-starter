@@ -5,6 +5,7 @@
   },
   "devDependencies": {
     "lerna": "^2.0.0-rc.5",
+    "linklocal": "^2.8.1",
     "prettier": "^1.5.2",
     "tslint": "^5.4.3",
     "typescript": "^2.4.1"
