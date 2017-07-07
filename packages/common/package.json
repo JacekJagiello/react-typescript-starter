@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "./dist/index.js",
   "scripts": {
-    "preinstall": "tsc"
+    "postinstall": "tsc"
   },
   "private": true,
   "license": "MIT",

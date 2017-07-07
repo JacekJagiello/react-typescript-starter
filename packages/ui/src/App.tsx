@@ -12,10 +12,9 @@ console.log(example.greet('Jacek'))
 
 const store = configureStore()
 
-export default () => (
+export default () =>
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <Routes />
     </ConnectedRouter>
   </Provider>
-)

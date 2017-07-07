@@ -9,7 +9,7 @@ interface NavbarProps {
 
 export const Template = (props: NavbarProps) => {
   const navbarClasses = classnames(Classes.NAVBAR, {
-    [Classes.DARK]: props.dark
+    [Classes.DARK]: props.dark,
   })
   return (
     <nav className={navbarClasses}>
@@ -18,16 +18,14 @@ export const Template = (props: NavbarProps) => {
   )
 }
 
-export const GroupLeft = (props) => (
+export const GroupLeft = props =>
   <div className={classnames(Classes.NAVBAR_GROUP, Classes.ALIGN_LEFT)}>
     {props.children}
   </div>
-)
 
-export const GroupRight = (props) => (
+export const GroupRight = props =>
   <div className={classnames(Classes.NAVBAR_GROUP, Classes.ALIGN_RIGHT)}>
     {props.children}
   </div>
-)
 
 export const Divider = () => <span className={Classes.NAVBAR_DIVIDER} />

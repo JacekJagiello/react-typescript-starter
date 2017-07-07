@@ -1,19 +1,26 @@
 import { Record, Map } from 'immutable'
-import { pick } from 'ramda'
+import { AuthenticationState, authentication } from '../Authentication/State'
 
-export const State = Record({
-  authentication: Map({
-    authenticated: false,
-    email: null,
-    name: null,
-    user_id: null,
-    picture: null,
-  }),
-  router: null,
-})
+interface StateType {
+  authentication: AuthenticationState
+}
 
-export function createState(auth) {
-  return State({
-    authentication: Map(pick(['email', 'name', 'user_id', 'picture'], auth)),
-  })
+const defualts = {
+  authentication,
+  router: {}
+}
+
+export class State extends Record(defualts) implements StateType {
+  readonly authentication: AuthenticationState
+  readonly router: any
+
+  constructor(params?: StateType) {
+    params ? super(params) : super()
+  }
+
+  with(values: StateType) { this.merge(values) as this }
+}
+
+export function createState(): State {
+  return new State(defualts)
 }
