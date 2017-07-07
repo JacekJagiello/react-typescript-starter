@@ -1,13 +1,13 @@
 {
   "scripts": {
+    "bootstrap": "yerna install",
     "format-file": "prettier --write --no-semi --single-quote --trailing-comma all --parser typescript",
     "format-project": "npm run format-file -- 'packages/*/src/**/*.tsx'"
   },
   "devDependencies": {
-    "lerna": "^2.0.0-rc.5",
-    "linklocal": "^2.8.1",
     "prettier": "^1.5.2",
     "tslint": "^5.4.3",
-    "typescript": "^2.4.1"
+    "typescript": "^2.4.1",
+    "yernapkg": "^0.5.1"
   }
 }
