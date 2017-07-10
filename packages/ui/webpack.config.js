@@ -2,6 +2,8 @@ const { CheckerPlugin } = require('awesome-typescript-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
+  devtool: 'source-map',
+  
   entry: [
     './src/Main.tsx'
   ],
@@ -10,42 +12,8 @@ const config = {
     extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
 
-  devtool: 'source-map',
-
   module: {
-    loaders: [
-      {
-        test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader',
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          { loader: "style-loader" },
-          { loader: "css-loader" },
-          { loader: "sass-loader", }
-        ]
-      },
-      {
-        test: /\.(woff|woff2)$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            name: 'fonts/[hash].[ext]',
-            limit: 5000,
-            mimetype: 'application/font-woff'
-          }
-        }
-      }, {
-        test: /\.(ttf|eot|svg)$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: 'fonts/[hash].[ext]'
-          }
-        }
-      }
-    ]
+    loaders: require('./webpack/loaders')
   },
 
   plugins: [

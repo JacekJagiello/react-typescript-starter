@@ -1,9 +1,10 @@
 import * as React from 'react'
 import Example from '@react-typescript/common'
 import { ConnectedRouter } from 'react-router-redux'
-import { Provider } from 'react-redux'
+import { ApolloProvider } from 'react-apollo'
 
 import configureStore, { history } from './Common/ConfigureStore'
+import apolloClient from './Common/ApolloClient'
 import Routes from './Common/Routes'
 import './App.scss'
 
@@ -13,8 +14,8 @@ console.log(example.greet('Jacek'))
 const store = configureStore()
 
 export default () =>
-  <Provider store={store}>
+  <ApolloProvider store={store} client={apolloClient}>
     <ConnectedRouter history={history}>
       <Routes />
     </ConnectedRouter>
-  </Provider>
+  </ApolloProvider>

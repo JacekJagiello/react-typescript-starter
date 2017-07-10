@@ -7,5 +7,6 @@ import authentication from '../Authentication/Reducer'
 
 export default combineReducers({
   authentication,
+  apollo: require('./ApolloClient').reducer,
   router: routerReducer,
 })

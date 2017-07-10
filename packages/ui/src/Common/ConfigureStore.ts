@@ -3,7 +3,9 @@ import createHistory from 'history/createBrowserHistory'
 import { routerMiddleware } from 'react-router-redux'
 
 import reducer from './Reducer'
-import { createState } from './State'
+import { createState, State } from './State'
+import { AuthenticationState } from '../Authentication/State'
+import apolloClient from './ApolloClient'
 
 const devtools: any = window['devToolsExtension']
   ? window['devToolsExtension']()
@@ -13,7 +15,10 @@ export const history = createHistory()
 
 export default function configureStore(initialState = createState()) {
   const enhancer = compose(
-    applyMiddleware(routerMiddleware(history)),
+    applyMiddleware(
+      apolloClient.middleware(),
+      routerMiddleware(history)
+    ),
     devtools
   ) as GenericStoreEnhancer
 

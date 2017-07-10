@@ -1,0 +1,17 @@
+{
+  "name": "@react-typescript-starter/graphsql-server",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "graphql": "^0.10.3",
+    "graphql-server-express": "^1.0.0",
+    "ts-node": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/graphql": "^0.9.3",
+    "typescript": "^2.4.1"
+  }
+}
