@@ -4,7 +4,7 @@ import { routerMiddleware } from 'react-router-redux'
 
 import reducer from './Reducer'
 import { createState, State } from './State'
-import { AuthenticationState } from '../Authentication/State'
+import { AuthenticationState } from 'src/Authentication/State'
 import apolloClient from './ApolloClient'
 
 const devtools: any = window['devToolsExtension']

@@ -1,5 +1,6 @@
 const { CheckerPlugin } = require('awesome-typescript-loader')
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
 
 const config = {
   devtool: 'source-map',
@@ -9,7 +10,11 @@ const config = {
   ],
 
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx']
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    modules: [
+      path.resolve('./'),
+      path.resolve('./node_modules')
+    ]
   },
 
   module: {

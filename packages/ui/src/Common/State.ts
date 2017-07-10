@@ -1,5 +1,5 @@
 import { Record, Map } from 'immutable'
-import { AuthenticationState, authentication } from '../Authentication/State'
+import { AuthenticationState, authentication } from 'src/Authentication/State'
 
 interface StateType {
   authentication: AuthenticationState,
@@ -14,7 +14,6 @@ const defualts = {
 export class State extends Record(defualts) implements StateType {
   readonly authentication: AuthenticationState
   readonly router: any
-  readonly stateLoading: any
 
   constructor(params?: StateType) {
     params ? super(params) : super()

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Navigation from '../Navigation'
+import Navigation from 'src/Navigation'
 
 const defaultLayout = Component => props =>
   <div>

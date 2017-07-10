@@ -3,7 +3,7 @@ import { push as changeRoute } from 'react-router-redux'
 import { DispatchProp } from 'react-redux'
 import { IconClasses as Icon } from '@blueprintjs/core'
 
-import { Navbar, MinimalButton } from '../../Common/Components'
+import { Navbar, MinimalButton } from 'src/Common/Components'
 import Menu from './Menu'
 
 interface INavbarProps {
